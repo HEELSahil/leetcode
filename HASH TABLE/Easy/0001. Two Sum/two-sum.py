@@ -1,4 +1,4 @@
-#Hash Map Solution
+# Hash Map Solution
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -21,7 +21,35 @@ class Solution:
     
 #----------------------------------------------------------------
 
-#Brute Force
+# Sorting (Two Pointer Method)
+    
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
+#         sorted_nums = sorted(enumerate(nums), key=lambda x: x[1])
+#         i, j = 0, len(sorted_nums) - 1
+        
+#         while i < j:
+#             current_sum = sorted_nums[i][1] + sorted_nums[j][1]
+
+#             if current_sum == target:
+#                 return [sorted_nums[i][0], sorted_nums[j][0]]
+#             elif current_sum < target:
+#                 i += 1
+#             else:
+#                 j -= 1
+#         return
+    
+# The time complexity of this solution is O(n logn), and the space complexity is O(n).
+
+# Time Complexity Explanation:
+# The sorting operation dominates the time complexity, with the sorted function having a time complexity of O(n log n). The subsequent two-pointer approach has a linear time complexity, O(n).
+    
+# Space Complexity Explanation:
+# The sorted_nums list is created to store the enumerated and sorted version of the input array. Its size is proportional to the size of the input array, contributing to a space complexity of O(n).
+
+#----------------------------------------------------------------
+
+# Brute Force
 
 # class Solution:
 #     def twoSum(self, nums: List[int], target: int) -> List[int]:
